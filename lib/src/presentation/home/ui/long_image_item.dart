@@ -15,12 +15,13 @@ class _LongImageItemWidgetState extends State<LongImageItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 370,
+      height: MediaQuery.of(context).size.width + 8,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          image: DecorationImage(
-              image: AssetImage('assets/images/jpg/long-${pickIndex()}.jpg'),
-              fit: BoxFit.cover)),
+        borderRadius: BorderRadius.circular(25),
+        image: DecorationImage(
+            image: AssetImage('assets/images/jpg/long-${pickIndex()}.jpg'),
+            fit: BoxFit.cover),
+      ),
       child: Column(
         children: [
           const Spacer(),

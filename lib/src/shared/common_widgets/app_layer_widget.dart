@@ -29,7 +29,7 @@ class _AppLayerWidgetState extends State<AppLayerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 45,
       width: 80,
       decoration: BoxDecoration(
         color: AppColors.brandPrimary,

@@ -88,6 +88,23 @@ class _MapScreenState extends State<MapScreen>
           positions: positions,
           markers: _markers,
         ),
+
+
+        for (var i in _screenPositions)
+          Positioned(
+            left: (i.dx / pixelRatio),
+            top: (i.dy / pixelRatio),
+            child: SizedBox(
+              height: 50,
+              child: Stack(
+                children: [
+                  MapScreenBuildingIcon(showIcon: showIcon),
+                  MapBuildingInfoIcon(animation: _animation, count: count++)
+                ],
+              ),
+            ),
+          ),
+        const AppSearchWidget(),
         AppMapOptionsWidget(
           onTap: (index) {
             setState(() {
@@ -105,21 +122,6 @@ class _MapScreenState extends State<MapScreen>
           },
           currentIndex: selectorIndex,
         ),
-        const AppSearchWidget(),
-        for (var i in _screenPositions)
-          Positioned(
-            left: (i.dx / pixelRatio),
-            top: (i.dy / pixelRatio),
-            child: SizedBox(
-              height: 50,
-              child: Stack(
-                children: [
-                  MapScreenBuildingIcon(showIcon: showIcon),
-                  MapBuildingInfoIcon(animation: _animation, count: count++)
-                ],
-              ),
-            ),
-          )
       ],
     );
   }

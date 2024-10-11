@@ -15,7 +15,7 @@ class MapScreenBuildingIcon extends StatelessWidget {
     return Visibility(
       visible: showIcon,
       child: Container(
-        height: 50,
+        height: 45,
         width: 40,
         decoration: BoxDecoration(
           color: AppColors.brandPrimary,

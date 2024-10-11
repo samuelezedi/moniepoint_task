@@ -84,8 +84,8 @@ class _AppMapOptionsWidgetState extends State<AppMapOptionsWidget> {
                   ScaleFromBottomLeftAnimator(
                     controller: scaleAnimatorController,
                     child: Container(
-                      height: 180,
-                      width: 170,
+                      height: MediaQuery.of(context).size.width * 0.50,
+                      width: MediaQuery.of(context).size.width * 0.45,
                       padding: const EdgeInsets.only(
                         left: 17,
                         top: 20,
@@ -94,89 +94,98 @@ class _AppMapOptionsWidgetState extends State<AppMapOptionsWidget> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
                           color: AppColors.white),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          PopListItemWidget(
-                            icon: Icon(
-                              IconsaxPlusLinear.shield_tick,
-                              color: AppColors.textSecondary,
-                              size: 18,
-                            ),
-                            title: "Cozy areas",
-                            index: index,
-                            onTap: (i) {
-                              setState(() {
-                                showPicker = false;
-                                index = i;
-                                scaleAnimatorController.reverse();
-                              });
+                      child: LayoutBuilder(
+                        builder: (context, constraint) {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              PopListItemWidget(
 
-                              widget.onTap(i);
-                            },
-                          ),
-                          PopListItemWidget(
-                            icon: Icon(
-                              IconsaxPlusLinear.empty_wallet,
-                              color: index == 2
-                                  ? AppColors.brandPrimary
-                                  : AppColors.textSecondary,
-                              size: 18,
-                            ),
-                            title: "Price",
-                            index: index,
-                            onTap: (i) {
-                              setState(() {
-                                showPicker = false;
-                                index = 2;
-                                scaleAnimatorController.reverse();
-                              });
-                              widget.onTap(2);
-                            },
-                            textColor: index == 2
-                                ? AppColors.brandPrimary
-                                : AppColors.textSecondary,
-                          ),
-                          PopListItemWidget(
-                            icon: Icon(
-                              IconsaxPlusLinear.bag,
-                              color: AppColors.textSecondary,
-                              size: 18,
-                            ),
-                            index: index,
-                            onTap: (i) {
-                              setState(() {
-                                showPicker = false;
-                                index = i;
-                                scaleAnimatorController.reverse();
-                              });
-                              widget.onTap(i);
-                            },
-                            title: "Infrastructure",
-                          ),
-                          PopListItemWidget(
-                            icon: Icon(
-                              IconsaxPlusLinear.layer,
-                              color: index == 4
-                                  ? AppColors.brandPrimary
-                                  : AppColors.textSecondary,
-                              size: 18,
-                            ),
-                            index: index,
-                            onTap: (i) {
-                              setState(() {
-                                showPicker = false;
-                                index = 4;
-                                scaleAnimatorController.reverse();
-                              });
-                              widget.onTap(4);
-                            },
-                            title: "Without any layer",
-                            textColor: index == 4
-                                ? AppColors.brandPrimary
-                                : AppColors.textSecondary,
-                          ),
-                        ],
+                                icon: Icon(
+                                  IconsaxPlusLinear.shield_tick,
+                                  color: AppColors.textSecondary,
+                                  size: 18,
+                                ),
+                                constraints: constraint,
+                                title: "Cozy areas",
+                                index: index,
+                                onTap: (i) {
+                                  setState(() {
+                                    showPicker = false;
+                                    index = i;
+                                    scaleAnimatorController.reverse();
+                                  });
+
+                                  widget.onTap(i);
+                                },
+                              ),
+                              PopListItemWidget(
+                                icon: Icon(
+                                  IconsaxPlusLinear.empty_wallet,
+                                  color: index == 2
+                                      ? AppColors.brandPrimary
+                                      : AppColors.textSecondary,
+                                  size: 18,
+                                ),
+                                constraints: constraint,
+                                title: "Price",
+                                index: index,
+                                onTap: (i) {
+                                  setState(() {
+                                    showPicker = false;
+                                    index = 2;
+                                    scaleAnimatorController.reverse();
+                                  });
+                                  widget.onTap(2);
+                                },
+                                textColor: index == 2
+                                    ? AppColors.brandPrimary
+                                    : AppColors.textSecondary,
+                              ),
+                              PopListItemWidget(
+                                icon: Icon(
+                                  IconsaxPlusLinear.bag,
+                                  color: AppColors.textSecondary,
+                                  size: 18,
+                                ),
+                                constraints: constraint,
+                                index: index,
+                                onTap: (i) {
+                                  setState(() {
+                                    showPicker = false;
+                                    index = i;
+                                    scaleAnimatorController.reverse();
+                                  });
+                                  widget.onTap(i);
+                                },
+                                title: "Infrastructure",
+                              ),
+                              PopListItemWidget(
+                                icon: Icon(
+                                  IconsaxPlusLinear.layer,
+                                  color: index == 4
+                                      ? AppColors.brandPrimary
+                                      : AppColors.textSecondary,
+                                  size: 18,
+                                ),
+                                index: index,
+                                constraints: constraint,
+                                onTap: (i) {
+                                  setState(() {
+                                    showPicker = false;
+                                    index = 4;
+                                    scaleAnimatorController.reverse();
+                                  });
+                                  widget.onTap(4);
+                                },
+                                title: "Without any layer",
+                                textColor: index == 4
+                                    ? AppColors.brandPrimary
+                                    : AppColors.textSecondary,
+                              ),
+                            ],
+                          );
+                        }
                       ),
                     ),
                   ),

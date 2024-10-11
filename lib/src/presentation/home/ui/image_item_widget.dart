@@ -14,7 +14,7 @@ class _ImageItemWidgetState extends State<ImageItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 190,
+      height:  MediaQuery.of(context).size.width / 2,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         image: DecorationImage(image: AssetImage('assets/images/jpg/rectangle-${pickIndex()}.jpg'), fit: BoxFit.cover)

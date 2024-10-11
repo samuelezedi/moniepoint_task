@@ -8,6 +8,7 @@ class PopListItemWidget extends StatelessWidget {
     required this.title,
     required this.onTap,
     required this.index,
+    required this.constraints,
     this.textColor,
     super.key,
   });
@@ -17,6 +18,7 @@ class PopListItemWidget extends StatelessWidget {
   final Color? textColor;
   final int index;
   final Function(int index) onTap;
+  final BoxConstraints constraints;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class PopListItemWidget extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: AppStyles.bodyMedium.copyWith(fontSize: 13, color: textColor,),
+              style: AppStyles.bodyMedium.copyWith(fontSize: constraints.maxWidth *0.08, color: textColor,),
             ),
           )
         ],

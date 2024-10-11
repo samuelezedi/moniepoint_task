@@ -19,7 +19,7 @@ class AppSearchWidget extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  height: 55,
+                  height: MediaQuery.of(context).size.height * 0.07,
                   decoration: BoxDecoration(
                       color: AppColors.white,
                       borderRadius: BorderRadius.circular(55)),
@@ -30,6 +30,7 @@ class AppSearchWidget extends StatelessWidget {
                         Icon(
                           IconsaxPlusLinear.search_normal_1,
                           color: AppColors.textPrimary,
+                          size: MediaQuery.of(context).size.width * 0.06,
                         ),
                         const Gap(12),
                         Expanded(
@@ -37,7 +38,7 @@ class AppSearchWidget extends StatelessWidget {
                             initialValue: "Saint Petersburg",
                             style: AppStyles.bodyMedium.copyWith(
                               color: AppColors.textPrimary,
-                              fontSize: 16,
+                              fontSize: MediaQuery.of(context).size.width * 0.03,
                             ),
                             cursorColor: AppColors.textPrimary,
                             decoration: const InputDecoration(
@@ -54,15 +55,16 @@ class AppSearchWidget extends StatelessWidget {
               ),
               gapSmall,
               Container(
-                height: 55,
+                height: MediaQuery.of(context).size.height * 0.07,
                 width: 55,
                 decoration: BoxDecoration(
                     color: AppColors.white,
-                    borderRadius: BorderRadius.circular(55)),
+                    borderRadius: BorderRadius.circular(100)),
                 child: Center(
                   child: Icon(
                     IconsaxPlusLinear.candle_2,
                     color: AppColors.textPrimary,
+                    size: MediaQuery.of(context).size.width * 0.06,
                   ),
                 ),
               )

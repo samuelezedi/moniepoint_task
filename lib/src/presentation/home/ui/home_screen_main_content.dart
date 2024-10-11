@@ -90,15 +90,19 @@ class HomeScreenMainContent extends StatelessWidget {
               child: ScaleAnimator(
                 controller: profilePictureAnimation2,
                 duration: const Duration(milliseconds: 800),
-                child: LargeContainerWidget(
-                  color: AppColors.brandPrimary,
-                  size: 180,
-                  radius: 180,
-                  title: 'BUY',
-                  textColor: AppColors.white,
-                  beginText: 100,
-                  endText: 1034,
-                  subText: 'offers',
+                child: LayoutBuilder(
+                  builder: (context, constraint) {
+                    return LargeContainerWidget(
+                      color: AppColors.brandPrimary,
+                      size: constraint.maxWidth,
+                      radius: constraint.maxWidth,
+                      title: 'BUY',
+                      textColor: AppColors.white,
+                      beginText: 100,
+                      endText: 1034,
+                      subText: 'offers',
+                    );
+                  }
                 ),
               ),
             ),
@@ -109,15 +113,19 @@ class HomeScreenMainContent extends StatelessWidget {
                 duration: const Duration(
                   milliseconds: 800,
                 ),
-                child: LargeContainerWidget(
-                  color: AppColors.white,
-                  size: 180,
-                  radius: 30,
-                  title: 'RENT',
-                  textColor: AppColors.textSecondary,
-                  beginText: 500,
-                  endText: 2212,
-                  subText: 'offers',
+                child: LayoutBuilder(
+                  builder: (context, constraint) {
+                    return LargeContainerWidget(
+                      color: AppColors.white,
+                      size: constraint.maxWidth,
+                      radius: 30,
+                      title: 'RENT',
+                      textColor: AppColors.textSecondary,
+                      beginText: 500,
+                      endText: 2212,
+                      subText: 'offers',
+                    );
+                  }
                 ),
               ),
             )

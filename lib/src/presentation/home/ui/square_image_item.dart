@@ -15,7 +15,7 @@ class _SquareImageItemState extends State<SquareImageItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:180,
+      height: MediaQuery.of(context).size.width / 2,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
           image: DecorationImage(image: AssetImage('assets/images/jpg/square-${pickIndex()}.jpg'), fit: BoxFit.cover)
