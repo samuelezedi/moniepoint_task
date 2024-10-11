@@ -19,7 +19,7 @@ class AppSearchWidget extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.07,
+                  height: 55,
                   decoration: BoxDecoration(
                       color: AppColors.white,
                       borderRadius: BorderRadius.circular(55)),
@@ -55,7 +55,7 @@ class AppSearchWidget extends StatelessWidget {
               ),
               gapSmall,
               Container(
-                height: MediaQuery.of(context).size.height * 0.07,
+                height: 55,
                 width: 55,
                 decoration: BoxDecoration(
                     color: AppColors.white,

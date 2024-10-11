@@ -31,11 +31,11 @@ class _HomeScreenState extends State<HomeScreen>
     await Future.delayed(const Duration(seconds: 2));
     await _animationController.forward();
 
-    await Future.delayed(const Duration(seconds: 2));
-    double targetValue = 0.15;
-    double targetFraction = (_animation.value - targetValue);
-    await _animationController.animateTo(targetFraction,
-        duration: const Duration(seconds: 1));
+    // await Future.delayed(const Duration(seconds: 2));
+    // double targetValue = 0.15;
+    // double targetFraction = (_animation.value - targetValue);
+    // await _animationController.animateTo(0.48,
+    //     duration: const Duration(seconds: 1));
   }
 
   void _handleAnimationEffects() {
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen>
       curve: Curves.easeInOut,
     );
 
-    _animation = Tween<double>(begin: begin, end: 0.7).animate(curveAnimation)
+    _animation = Tween<double>(begin: begin, end: 0.5).animate(curveAnimation)
       ..addListener(() {
         setState(() {});
       });

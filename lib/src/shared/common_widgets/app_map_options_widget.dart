@@ -60,8 +60,8 @@ class _AppMapOptionsWidgetState extends State<AppMapOptionsWidget> {
                       });
                     },
                     child: SizedBox(
-                      height: 180,
-                      width: 170,
+                      height: MediaQuery.of(context).size.width * 0.50,
+                      width: MediaQuery.of(context).size.width * 0.45,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

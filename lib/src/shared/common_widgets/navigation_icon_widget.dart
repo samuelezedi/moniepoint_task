@@ -47,8 +47,8 @@ class _NavigationIconWidgetState extends State<NavigationIconWidget> {
                 controller: animatorController,
                 duration: const Duration(milliseconds: 600),
                 child: Container(
-                  height:  MediaQuery.of(context).size.width * 0.14,
-                  width: MediaQuery.of(context).size.width * 0.14,
+                  height:  50,
+                  width: 50,
                   padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
@@ -58,8 +58,8 @@ class _NavigationIconWidgetState extends State<NavigationIconWidget> {
                 ),
               ),
               Container(
-                  height:  MediaQuery.of(context).size.width * 0.14,
-                  width: MediaQuery.of(context).size.width * 0.14,
+                  height:  50,
+                  width: 50,
                   padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
