@@ -1,16 +1,11 @@
-# moniepoint_test
+# MoniePoint Test App
 
-A new Flutter project.
+An assignment given my Moniepoint in an interview process. Below are screenshots just to showcase UI you will find when you run the app. Please note that you would have to add your Google API key in androidmanifext.xml to be able to run google map.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![Screenshot 1](path_to_screenshot_1.png)
+*Figure 1: Home screen of the MoniePoint Test App*
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2](path_to_screenshot_2.png)
+*Figure 2: Map Screen*
